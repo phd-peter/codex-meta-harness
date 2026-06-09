@@ -8,6 +8,12 @@ Codex Meta Harness is a Codex-native meta-skill for designing repo-local agent h
 
 This project is adapted from [revfactory/harness](https://github.com/revfactory/harness) and distributed under the same Apache 2.0 license.
 
+## How It Works
+
+![Codex Meta Harness workflow](assets/harness_flow.svg)
+
+Codex Meta Harness turns a repository workflow into durable Codex-facing artifacts: repo-local skills, optional custom agents, team specs, `_workspace/` handoffs, and validation commands.
+
 ## What This Adds
 
 - Codex-first skill layout using `.agents/skills/`
@@ -47,6 +53,8 @@ codex-meta-harness/
 ```
 
 The canonical authoring copy lives under `.agents/skills/harness/`. The `skills/harness/` copy is packaged by the Codex plugin manifest and must remain an exact mirror.
+
+![Canonical and packaged skill mirror contract](assets/skill_mirror_contract.svg)
 
 After editing the canonical skill, sync the packaged copy:
 

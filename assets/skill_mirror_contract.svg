@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">Canonical skill mirror contract</title>
+  <desc id="desc">A diagram showing the canonical Harness skill syncing into the packaged plugin mirror and being checked by validation.</desc>
+  <rect width="960" height="720" rx="28" fill="#0f172a"/>
+  <text x="70" y="76" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Skill Mirror Contract</text>
+  <text x="72" y="116" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="21">The packaged plugin skill must exactly match the canonical skill.</text>
+
+  <rect x="120" y="165" width="720" height="110" rx="16" fill="#111827" stroke="#10a37f" stroke-width="3"/>
+  <text x="165" y="212" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">Canonical Source</text>
+  <text x="165" y="246" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">.agents/skills/harness/</text>
+
+  <line x1="480" y1="300" x2="480" y2="345" stroke="#2dd4bf" stroke-width="5"/>
+  <polygon points="480,365 468,345 492,345" fill="#2dd4bf"/>
+
+  <rect x="120" y="390" width="720" height="110" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="165" y="437" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">Sync Script</text>
+  <text x="165" y="471" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">scripts/sync_packaged_skill.py</text>
+
+  <line x1="480" y1="525" x2="480" y2="570" stroke="#2dd4bf" stroke-width="5"/>
+  <polygon points="480,590 468,570 492,570" fill="#2dd4bf"/>
+
+  <rect x="120" y="615" width="350" height="70" rx="16" fill="#111827" stroke="#10a37f" stroke-width="3"/>
+  <text x="155" y="660" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">skills/harness/</text>
+
+  <rect x="515" y="615" width="325" height="70" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="550" y="660" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">validate drift</text>
+</svg>

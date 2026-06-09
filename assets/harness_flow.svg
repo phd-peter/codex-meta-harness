@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Meta Harness workflow</title>
+  <desc id="desc">A workflow showing a user goal becoming a harness skill, repository artifacts, and validation.</desc>
+  <rect width="960" height="720" rx="28" fill="#0f172a"/>
+  <text x="70" y="76" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">How Codex Meta Harness Works</text>
+  <text x="72" y="116" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="21">Reusable repo guidance, skills, handoffs, and checks.</text>
+
+  <rect x="70" y="170" width="340" height="170" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="110" y="222" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">User Goal</text>
+  <text x="110" y="266" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">Build a reusable research,</text>
+  <text x="110" y="294" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">review, or experiment flow.</text>
+
+  <line x1="435" y1="255" x2="485" y2="255" stroke="#2dd4bf" stroke-width="5"/>
+  <polygon points="505,255 485,243 485,267" fill="#2dd4bf"/>
+
+  <rect x="530" y="170" width="360" height="170" rx="16" fill="#111827" stroke="#10a37f" stroke-width="3"/>
+  <text x="570" y="222" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Harness Skill</text>
+  <text x="570" y="266" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">Analyze the domain.</text>
+  <text x="570" y="294" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">Define roles and contracts.</text>
+
+  <line x1="710" y1="365" x2="710" y2="410" stroke="#2dd4bf" stroke-width="5"/>
+  <polygon points="710,430 698,410 722,410" fill="#2dd4bf"/>
+
+  <rect x="160" y="455" width="640" height="145" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="205" y="506" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Repo Artifacts</text>
+  <text x="205" y="550" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">.agents/skills/*  |  docs/harness/*  |  _workspace/*</text>
+  <text x="205" y="578" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">Named outputs, review gates, and validation commands.</text>
+
+  <text x="245" y="660" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="20">Validation evidence feeds the next revision.</text>
+</svg>

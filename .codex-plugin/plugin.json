@@ -1,7 +1,7 @@
 {
   "name": "codex-meta-harness",
   "version": "0.1.0",
-  "description": "Codex-native meta-skill for designing repo-local agent harnesses with reusable skills, optional custom agents, team specs, and deterministic handoffs.",
+  "description": "Codex-native meta-skill for turning repository workflows into repo-local skills, team specs, validation loops, and deterministic handoffs.",
   "author": {
     "name": "phd-peter",
     "url": "https://github.com/phd-peter"
@@ -21,8 +21,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Meta Harness",
-    "shortDescription": "Design reusable Codex harnesses for repositories.",
-    "longDescription": "Generate repo-local Codex skills, team specs, validation loops, and deterministic handoff artifacts for complex workflows.",
+    "shortDescription": "Turn repository workflows into reusable Codex harnesses.",
+    "longDescription": "Generate repo-local Codex skills, team specs, validation loops, and handoff contracts for complex workflows, with a packaged skill mirror kept in sync for plugin distribution.",
     "developerName": "phd-peter",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
