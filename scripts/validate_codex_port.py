@@ -16,6 +16,7 @@ REQUIRED_FILES = [
     "NOTICE",
     "LICENSE",
     ".codex-plugin/plugin.json",
+    ".agents/plugins/marketplace.json",
     ".agents/skills/harness/SKILL.md",
     "skills/harness/SKILL.md",
     "docs/installation.md",
@@ -142,6 +143,28 @@ def check_plugin_manifest(failures: list[str]) -> None:
         fail(failures, "plugin.json skills must be ./skills/")
 
 
+def check_marketplace(failures: list[str]) -> None:
+    path = ROOT / ".agents" / "plugins" / "marketplace.json"
+    if not path.exists():
+        return
+    try:
+        data = json.loads(read(path))
+    except json.JSONDecodeError as exc:
+        fail(failures, f"Invalid marketplace.json: {exc}")
+        return
+
+    plugins = data.get("plugins")
+    if not isinstance(plugins, list) or not plugins:
+        fail(failures, "marketplace.json must contain plugins[]")
+        return
+    entry = plugins[0]
+    if entry.get("name") != "codex-meta-harness":
+        fail(failures, "marketplace plugin name must be codex-meta-harness")
+    source = entry.get("source") or {}
+    if source.get("path") != "./":
+        fail(failures, "marketplace source.path must be ./ for this single-plugin repository")
+
+
 def iter_local_links(text: str) -> list[str]:
     links: list[str] = []
     markdown = r"!\[[^\]]*\]\(([^)]+)\)|\[[^\]]+\]\(([^)]+)\)"
@@ -191,6 +214,7 @@ def main() -> int:
     parse_frontmatter(ROOT / ".agents" / "skills" / "harness" / "SKILL.md", failures)
     parse_frontmatter(ROOT / "skills" / "harness" / "SKILL.md", failures)
     check_plugin_manifest(failures)
+    check_marketplace(failures)
     check_banned_tokens(failures)
     check_links(failures)
 

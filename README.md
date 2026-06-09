@@ -49,6 +49,19 @@ The canonical authoring copy lives under `.agents/skills/harness/`. The `skills/
 
 ## Install
 
+Add the GitHub marketplace source:
+
+```shell
+codex plugin marketplace add phd-peter/codex-meta-harness --ref main
+```
+
+Then open the plugin directory and install `Codex Meta Harness`:
+
+```text
+codex
+/plugins
+```
+
 Install the skill into another repository:
 
 ```shell

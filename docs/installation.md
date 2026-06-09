@@ -33,9 +33,23 @@ The repository root is plugin-ready because it includes:
 ```text
 .codex-plugin/plugin.json
 skills/harness/SKILL.md
+.agents/plugins/marketplace.json
 ```
 
-Use Codex plugin development commands for local marketplace testing once a GitHub repository exists.
+Add the GitHub marketplace source:
+
+```shell
+codex plugin marketplace add phd-peter/codex-meta-harness --ref main
+```
+
+Open Codex and install the plugin:
+
+```text
+codex
+/plugins
+```
+
+In the plugin browser, choose the `phd-peter-codex-meta-harness` marketplace and install `Codex Meta Harness`.
 
 ## Notes
 

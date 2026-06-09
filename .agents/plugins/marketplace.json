@@ -1,0 +1,21 @@
+{
+  "name": "phd-peter-codex-meta-harness",
+  "plugins": [
+    {
+      "name": "codex-meta-harness",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "interface": {
+        "displayName": "Codex Meta Harness",
+        "shortDescription": "Design reusable Codex harnesses for repositories."
+      }
+    }
+  ]
+}

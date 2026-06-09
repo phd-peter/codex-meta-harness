@@ -45,3 +45,15 @@ Codex plugins require:
 ```
 
 The manifest should point to `./skills/` when bundling skills.
+
+This repository also includes:
+
+```text
+.agents/plugins/marketplace.json
+```
+
+That file lets Codex treat the repository as a marketplace source:
+
+```shell
+codex plugin marketplace add phd-peter/codex-meta-harness --ref main
+```
