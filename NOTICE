@@ -1,0 +1,16 @@
+Codex Meta Harness
+Copyright 2026 phd-peter
+
+This project is adapted from Harness by revfactory:
+https://github.com/revfactory/harness
+
+Original project copyright notice:
+Copyright 2025 robin
+
+The original Harness project is licensed under Apache License 2.0. This derivative preserves that license and attribution.
+
+Major changes in this derivative:
+- Replaced Claude Code plugin assumptions with Codex plugin packaging.
+- Replaced `.claude/` generated paths with Codex skill and guidance paths.
+- Reworked orchestration guidance around Codex skills, AGENTS.md, and explicit subagent use.
+- Added validation and installation scripts for Codex-oriented usage.

@@ -1,0 +1,38 @@
+{
+  "name": "codex-meta-harness",
+  "version": "0.1.0",
+  "description": "Codex-native meta-skill for designing repo-local agent harnesses with reusable skills, optional custom agents, team specs, and deterministic handoffs.",
+  "author": {
+    "name": "phd-peter",
+    "url": "https://github.com/phd-peter"
+  },
+  "homepage": "https://github.com/phd-peter/codex-meta-harness",
+  "repository": "https://github.com/phd-peter/codex-meta-harness",
+  "license": "Apache-2.0",
+  "keywords": [
+    "codex",
+    "agent-skills",
+    "harness",
+    "meta-skill",
+    "orchestration",
+    "subagents",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Meta Harness",
+    "shortDescription": "Design reusable Codex harnesses for repositories.",
+    "longDescription": "Generate repo-local Codex skills, team specs, validation loops, and deterministic handoff artifacts for complex workflows.",
+    "developerName": "phd-peter",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/phd-peter/codex-meta-harness",
+    "defaultPrompt": [
+      "Build a reusable harness for this repository.",
+      "Design specialist skills and a team spec for this domain.",
+      "Create a review workflow with explicit QA handoffs."
+    ],
+    "brandColor": "#10A37F",
+    "logo": "./assets/meta_harness_icon.svg"
+  }
+}

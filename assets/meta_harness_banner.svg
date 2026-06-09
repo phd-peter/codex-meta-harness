@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Meta Harness</title>
+  <desc id="desc">A banner for the Codex Meta Harness project.</desc>
+  <rect width="1200" height="360" fill="#0f172a"/>
+  <rect x="72" y="70" width="1056" height="220" rx="18" fill="#111827" stroke="#2dd4bf" stroke-width="4"/>
+  <text x="110" y="165" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Codex Meta Harness</text>
+  <text x="112" y="225" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="28">Skills, agents, specs, and deterministic handoffs</text>
+  <circle cx="1000" cy="150" r="34" fill="#10a37f"/>
+  <circle cx="1070" cy="150" r="34" fill="#2dd4bf"/>
+  <circle cx="1035" cy="215" r="34" fill="#38bdf8"/>
+</svg>
