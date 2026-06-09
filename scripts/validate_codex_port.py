@@ -23,6 +23,7 @@ REQUIRED_FILES = [
     "docs/compatibility/codex.md",
     "docs/harness/README.md",
     "scripts/install_harness.py",
+    "scripts/sync_packaged_skill.py",
     "scripts/test_install_harness.py",
     "scripts/validate_codex_port.py",
 ]
@@ -165,6 +166,32 @@ def check_marketplace(failures: list[str]) -> None:
         fail(failures, "marketplace source.path must be ./ for this single-plugin repository")
 
 
+def iter_relative_files(base: Path) -> set[Path]:
+    if not base.exists():
+        return set()
+    return {
+        path.relative_to(base)
+        for path in base.rglob("*")
+        if path.is_file()
+    }
+
+
+def check_packaged_skill_mirror(failures: list[str]) -> None:
+    canonical = ROOT / ".agents" / "skills" / "harness"
+    packaged = ROOT / "skills" / "harness"
+
+    canonical_files = iter_relative_files(canonical)
+    packaged_files = iter_relative_files(packaged)
+
+    for relative in sorted(canonical_files - packaged_files):
+        fail(failures, f"Packaged skill mirror missing file: {relative}")
+    for relative in sorted(packaged_files - canonical_files):
+        fail(failures, f"Packaged skill mirror has extra file: {relative}")
+    for relative in sorted(canonical_files & packaged_files):
+        if (canonical / relative).read_bytes() != (packaged / relative).read_bytes():
+            fail(failures, f"Packaged skill mirror differs: {relative}")
+
+
 def iter_local_links(text: str) -> list[str]:
     links: list[str] = []
     markdown = r"!\[[^\]]*\]\(([^)]+)\)|\[[^\]]+\]\(([^)]+)\)"
@@ -211,6 +238,7 @@ def check_links(failures: list[str]) -> None:
 def main() -> int:
     failures: list[str] = []
     check_required_files(failures)
+    check_packaged_skill_mirror(failures)
     parse_frontmatter(ROOT / ".agents" / "skills" / "harness" / "SKILL.md", failures)
     parse_frontmatter(ROOT / "skills" / "harness" / "SKILL.md", failures)
     check_plugin_manifest(failures)
