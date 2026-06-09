@@ -1,7 +1,26 @@
 # Autonomous Experimentation
 
-Use this profile only when the user requests iterative experiments on user-controlled compute.
+Use this profile only when the user asks for iterative experiments on user-controlled compute.
 
-Require an immutable evaluation surface, mutable proposal surface, baseline result, fixed metric, budget, and results ledger.
+## Required Contract
 
-Store durable evidence under `_workspace/experiments/<run>/`.
+- Immutable evaluation surface
+- Mutable proposal surface
+- Baseline result
+- Fixed metric
+- Budget or stop condition
+- Results ledger
+
+## Directory Shape
+
+```text
+_workspace/experiments/<run>/
+├── baseline.md
+├── proposals/
+├── results.tsv
+└── summary.md
+```
+
+## Keep Or Discard
+
+Keep a proposal only when it improves the fixed metric without violating the immutable surface or write scope. Record crashes, timeouts, no-change runs, and scope violations explicitly.

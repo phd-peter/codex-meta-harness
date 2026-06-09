@@ -18,4 +18,24 @@
 - Style rules already enforced by tooling
 - Temporary recovery heuristics
 
+## Template
+
+```markdown
+# Repository Agents Guide
+
+## What
+
+- One or two bullets about the repository purpose.
+
+## Why
+
+- One or two bullets about the durable operating principle.
+
+## How
+
+- Canonical paths.
+- Required verification commands.
+- Links to deeper docs.
+```
+
 When in doubt, link out instead of expanding this file.

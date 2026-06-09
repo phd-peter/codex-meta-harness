@@ -40,12 +40,19 @@ codex-meta-harness/
 │   └── harness/
 ├── scripts/
 │   ├── install_harness.py
+│   ├── sync_packaged_skill.py
 │   ├── test_install_harness.py
 │   └── validate_codex_port.py
 └── assets/
 ```
 
-The canonical authoring copy lives under `.agents/skills/harness/`. The `skills/harness/` copy is packaged by the Codex plugin manifest.
+The canonical authoring copy lives under `.agents/skills/harness/`. The `skills/harness/` copy is packaged by the Codex plugin manifest and must remain an exact mirror.
+
+After editing the canonical skill, sync the packaged copy:
+
+```shell
+python3 scripts/sync_packaged_skill.py
+```
 
 ## Install
 
@@ -97,11 +104,12 @@ Codex Meta Harness generates the smallest useful durable artifact set:
 ## Validation
 
 ```shell
+python3 scripts/sync_packaged_skill.py
 python3 scripts/test_install_harness.py
 python3 scripts/validate_codex_port.py
 ```
 
-The validator checks required files, skill frontmatter, README links, Codex plugin metadata, and removed runtime-specific tokens.
+The validator checks required files, skill frontmatter, README links, Codex plugin metadata, exact packaged-skill mirroring, and removed runtime-specific tokens.
 
 ## License
 
